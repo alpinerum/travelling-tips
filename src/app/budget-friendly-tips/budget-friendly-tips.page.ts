@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-budget-friendly-tips',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BudgetFriendlyTipsPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
+
+  public goBack() {
+    this.navCtrl.navigateRoot('');
+  }
 
   ngOnInit() {
   }
